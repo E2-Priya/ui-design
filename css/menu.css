@@ -1,0 +1,163 @@
+html{
+    height:100%;
+    width:100%;
+    }
+    header{
+        height:10%;
+        width:100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+        background-color:rgba(245, 247, 176, 0.897);
+        }
+       
+    body {
+            font-family: "Lato", sans-serif;
+            margin: 0%;
+            background-color: rgb(115, 234, 113);
+            height:100%;
+            width:100%;
+        
+          }
+
+    .full{
+        height: 90%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        text-align: center;;
+    }
+          .menu-bar{
+            height:10%;
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+
+
+            
+            background-color: #555;
+            overflow: auto;
+          }
+          
+          .menu-bar a{
+            float: left;
+            width: 20%;
+            text-align: center;
+            padding: 12px ;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 10px;
+
+
+            border-style:solid;
+            border-color: aliceblue;
+            border-width: thick;
+          }
+          
+          .menu-bar a:hover {
+            background-color: #000;
+          }
+          .default{
+            background-color: rgb(0, 0, 0);
+          }
+
+
+        .recommed{
+            height: 90%;
+            width: 100%;
+        
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .food1{
+            height:100%;
+            width:50%;
+           
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+               
+        }
+
+        .food1img{
+            height: 65%;
+            width:90%;
+            background-image:url('https://img.freepik.com/free-photo/mixed-pizza-with-various-ingridients_140725-3790.jpg?w=2000');
+            background-size:80%;
+            background-repeat: no-repeat;
+            background-size:cover;
+	       background-position:center;
+           margin-left: 10px;
+       
+        }
+        p{
+            display:block;
+        }
+
+        .food2{
+            height:100%;
+            width:50%;
+            background-color: rgb(248, 133, 133);
+
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .food2img{
+            height: 65%;
+            width:90%;
+            background-image:url('https://s3.envato.com/files/327423576/H-mixed%20pizza%20with%20extra%20olives%20and%20side%20tomatoes%20top%20view%20%20%20%20.jpg');
+            background-size:80%;
+            background-repeat: no-repeat;
+            background-size:cover;
+	       background-position:center;
+           margin-left: 10px;
+       
+        }
+
+
+
+        .recommed button{
+            height: 10%;
+            width:30%;
+            padding:20px;
+            
+            font-size:small;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            margin-block-start: 0.5cm;
+            margin-left: 0.5cm;
+            margin-right:0.5cm;
+    
+            background-color: rgb(140, 149, 168); 
+            color: rgb(11, 11, 11);
+        }
+
+        .recommed button:hover{
+            background-color: #5f5f5f;
+            color: white;}
+          
+        
+          

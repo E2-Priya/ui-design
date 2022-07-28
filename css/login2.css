@@ -1,0 +1,114 @@
+html{
+	height: 100%; 
+	width: 100%; 
+	margin: 0px;
+    background:url("https://media.istockphoto.com/videos/gray-abstract-minimal-motion-backgrounds-loopable-elements-4k-video-id1173905761?b=1&k=20&m=1173905761&s=640x640&h=W2yXx1Aivj_gALateCrUUJ4xNpptVeDp74jAl5-Kx3w=");
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position:center;
+}
+
+body{
+	height: 100%; 
+	 width: 100%; 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin:0px;
+   
+}
+
+form{
+	
+	width:100%; 
+	height:100%; 
+	display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  
+}
+a{
+	font-size: small;
+
+	text-decoration: none;
+    color: aliceblue;
+}
+.loginform{
+	height:60%;
+    width: 30%;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 20%);
+    flex-wrap: wrap;
+    align-content: center;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginform label{
+	font-family:Georgia, 'Times New Roman', Times, serif;
+	font-size:large;
+	height: 5%;
+	width: 90%;
+
+	
+}
+.loginform input{
+	height: 10%;
+	width:90%;
+	margin-block-start: 0.2cm;
+	margin-block-end: 0.5cm;
+	
+}
+
+::placeholder { 
+	
+	font-size: small;
+
+  }
+.loginform button{
+
+	height: 10%;
+	width:50%;
+	padding:10px;
+		
+		font-size:small;
+		transition-duration: 0.4s;
+		cursor: pointer;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		margin-block-start: 0.5cm;
+		margin-left: 0.5cm;
+		margin-right:0.5cm;
+		background-color: rgb(30, 33, 39); 
+	    color: rgb(248, 227, 227);
+		
+       
+	
+}
+.loginform button:hover{
+		background-color: #5f5f5f;
+		color: white;}
+@media only screen and (max-width: 768px) {
+ 	 .loginform {
+		width:60%; 
+		height:60%;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 640px)   {
+	.loginform {
+		width:60%; 
+		height:40%;
+	}	
+	.loginform label{height:15%;width: 95%;font-size: xxx-large;}
+	.loginform input{height: 10%;width:95%;place;}
+	.loginform button{height:10%;width:30%;font-size:xx-large;}
+	.loginform a{font-size: xxx-large;}
+    ::placeholder {font-size: xx-large;}
+}
