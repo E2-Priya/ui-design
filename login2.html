@@ -1,4 +1,4 @@
-<!DOCTYPE html>    
+<!-- <!DOCTYPE html>    
 <html>    
 <head>    
    
@@ -24,4 +24,75 @@
     </div>   
     </div>
   </form>
+</body> -->
+<!DOCTYPE html>    
+<html>    
+<head>    
+   
+    <title>User login form</title>    
+    <link rel="stylesheet" href="css/login2.css">    
+</head>    
+<body>    
+  <h3> USER LOGIN FORM </h3>  
+  
+  <form>
+    <div class="loginform">
+
+     <div class="user">
+        <label id="align">User mail id </label>   
+        <input type="mail" onblur="errorMessage()"placeholder="Enter valid Username" id="username">
+        <span id="error"></span>
+      </div>
+
+     <div class="pass">
+        <label id="align">Password </label>   
+        <input type="password" onblur="errorMsg()"placeholder="Enter Password" id="userpass" > 
+        <span id="passerror"></span>
+      </div>
+
+
+      <div class="bottom">
+        <button type="button" onclick="errorMessage(), errorMsg()">  LOGIN   </button> 
+      </div> 
+        
+      <a href=#><h5>  Forgot password? </h5> </a>  
+    </div>   
+  
+  </form>
+
+<script>
+        
+        function errorMessage() {
+    
+        var username =document.getElementById('username').value;
+        var uname = document.getElementById("error")
+        if ((document.getElementById("username").value==""))
+        {
+            uname.textContent = "Please enter usename"
+           
+        } else {
+            uname.textContent = ""
+        }
+        console.log(username);
+    
+    }
+   
+    function errorMsg(){
+    
+        var upass = document.getElementById("passerror")
+        if ((document.getElementById("userpass").value==""))
+        {
+            upass.textContent = "Please enter password"
+          
+        }
+        else {
+            upass.textContent = ""
+        } 
+    
+    }
+
+
+
+</script>
 </body>
+</html>
