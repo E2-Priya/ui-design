@@ -40,13 +40,13 @@
 
      <div class="user">
         <label id="align">User mail id </label>   
-        <input type="mail" onblur="errorMessage()"placeholder="Enter valid Username" id="username">
+        <input type="mail" onblur="errorMessage()"onkeyup="errorMessage()"placeholder="Enter valid Username" id="username">
         <span id="error"></span>
       </div>
 
      <div class="pass">
         <label id="align">Password </label>   
-        <input type="password" onblur="errorMsg()"placeholder="Enter Password" id="userpass" > 
+        <input type="password" onblur="errorMessage()"onkeyup="errorMsg()"placeholder="Enter Password" id="userpass" > 
         <span id="passerror"></span>
       </div>
 
@@ -64,7 +64,6 @@
         
         function errorMessage() {
     
-        var username =document.getElementById('username').value;
         var uname = document.getElementById("error")
         if ((document.getElementById("username").value==""))
         {
@@ -73,7 +72,7 @@
         } else {
             uname.textContent = ""
         }
-        console.log(username);
+      
     
     }
    

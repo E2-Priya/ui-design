@@ -164,7 +164,7 @@ form{
     justify-content: center;
     align-items: center;
 }
-.user label{
+label{
 	font-family:Georgia, 'Times New Roman', Times, serif;
 	font-size:large;
 	height: 25%;
@@ -173,24 +173,11 @@ form{
 	
 }
 
-.pass label{
-	font-family:Georgia, 'Times New Roman', Times, serif;
-	font-size:large;
+
+
+
+input{
 	height: 25%;
-	width: 90%;
-
-	
-}
-.user input{
-	height: 22%;
-	width:90%;
-	margin-block-start: 0.2cm;
-	margin-block-end: 0.2cm;
-	
-}
-
-.pass input{
-	height: 20%;
 	width:90%;
 	margin-block-start: 0.2cm;
 	margin-block-end: 0.2cm;
@@ -223,21 +210,9 @@ form{
 	
 }
 
-.user span{
-	height: 20%;
-	width: 100%;
-	
-   
-	display: flex;
-   
-    justify-content: center;
-    align-items: center;
 
-	color:rgb(40, 40, 151);
 
-}
-
-.pass span{
+span{
 	height: 20%;
 	width: 100%;
 
@@ -246,11 +221,11 @@ form{
     justify-content: center;
     align-items: center;
 
-	color:rgb(40, 40, 151);
+	color:rgb(228, 33, 33);
 
 }
 .user{
-	height: 30%;
+	height: 25%;
 	width: 100%;
 	flex-wrap: wrap;
     align-content: center;
@@ -261,7 +236,7 @@ form{
 }
 
 .pass{
-	height: 30%;
+	height: 25%;
 	width: 100%;
 	flex-wrap: wrap;
     align-content: center;
@@ -269,6 +244,7 @@ form{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	margin-block-end: 0.3cm;
 }
 
 .bottom{
