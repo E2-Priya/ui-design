@@ -4,9 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>simple modal</title>
   <link rel="stylesheet" href="styles (1).css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
-<body>
+<body onload="init();">
   <header>
     <div class="head">STUDENTS LIST</div>
     <div class="designbtn"><button id="modal-btn">Add Student</button></div>
@@ -14,14 +14,14 @@
 
   <div id="my-modal" class="modal">
     <div class="modal-content">
-        <form  onsubmit="addData(); return false;" id="formContainer"   required>
+        <form   id="formContainer"   required>
           <div class="modal-header">
             <p>STUDENT DETAIL</p>
             <button type="button" class="close" id="submit" onclick="closeForm()">&times;</button>
           </div>
           <div class="modal-body">
-            <label><p>STUDENT NAME</p></label>
-            <input id="studentName" type="text"  onblur="errorMessage()"onkeyup="errorMessage()" placeholder="Enter Student Name"required> 
+            <label ><p>STUDENT NAME</p></label>
+            <input id="studentName"  type="text" onblur="errorMessage()"onkeyup="errorMessage()"  placeholder="Enter Student Name"required> 
             <span id="error"></span>
             <label><p>STUDENT ID</p></label>
             <input id="studentId" type="text" onblur="errorMsg()"onkeyup="errorMsg()" placeholder="Enter Student Id"required> 
@@ -31,7 +31,7 @@
             <span id="error2"></span>
           </div>
           <div class="modal-footer">
-            <button  type="submit" onclick="closeModal(),errorMessage(),errorMsg,errorMsg1()"  id="closing">SUBMIT</button>
+            <button type="submit" onclick="closeModal(),onReg(),errorMessage(),errorMsg(),errorMsg1()"  id="closing">SUBMIT</button>
             <button type="reset" >CLEAR</button>
           </div>
         </form>
@@ -41,13 +41,21 @@
   <div class="container"> 
 
     <table border="1"  id="myTable">
-      <tr class="list">
-          <td> STUDENT NAME</td>
-          <td> STUDENT ID</td>
-          <td> STUDENT DEPARTMENT</td>
-          <td>DELETE</td>
-          <td>EDIT</td>
-      </tr>
+     
+        <thead >
+          <tr>
+            <th>STUDENT NAME</th>
+            <th>STUDENT ID</th>
+            <th>STUDENT DEPARTMENT</th>
+            <th>EDITE</th>
+            <th>DELETE</th>
+          </tr>
+        </thead>
+<tbody id = "tableRows" class="list">
+
+</tbody>
+
+
     </table>
   </div>
 
