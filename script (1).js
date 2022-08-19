@@ -24,65 +24,88 @@ function closeForm(){
     document.getElementById('closing').reset();
 } */
 
-var arr= new Array();
-function addData(){
-  getData();
-  arr.push({
-    studentName:document.getElementById("studentName").value,
-    studentId:document.getElementById("studentId").value,
-    studentDept:document.getElementById("studentDept").value
-  });
 
-  localStorage.setItem("localData",JSON.stringify(arr));
-  showData();
-  document.getElementById('formContainer').reset();
-}
 
-function getData(){
-  var str = localStorage.getItem("localData");
-    if(str !=null) 
-    arr=JSON.parse(str);
-}
 
-function deteleData(){
-  localStorage.clear(); 
-}
-
-function showData(){
-
- /*  getData(); */
-  var tbl = document.getElementById("myTable");
-  var x =tbl.rows.length;
-  while(--x){
-    tbl.deleteRow(x);
+var arr = [];
+function init(){
+  document.getElementById("tableRows").innerHTML="";
+  if (localStorage.record){
+    arr=JSON.parse(localStorage.record);
+    for(var i = 0; i<arr.length;i++){
+      var name = arr[i].n;
+var id  = arr[i].id;
+var dept = arr[i].dept;
+tableCell(i,name,id,dept);
+    }
   }
+}
+function onReg(){
+var name = document.getElementById("studentName").value;
+var id  = document.getElementById("studentId").value;
+var dept = document.getElementById("studentDept").value;
 
-  for(i=0;i<arr.length;i++){
-  var r = tbl.insertRow();
-  var cell1 = r.insertCell();
-  var cell2 = r.insertCell();
-  var cell3 = r.insertCell();
-  var cell4 = r.insertCell();
-  var cell5 = r.insertCell();
+var obj = {n:name,id:id,dept:dept};
+if(selectedIndex===-1){
+arr.push(obj);}
+else{arr.splice(selectedIndex,1,obj);}
 
-  cell1.innerHTML=arr[i].studentName;
-  cell2.innerHTML=arr[i].studentId;
-  cell3.innerHTML=arr[i].studentDept;
-  cell4.innerHTML=`<i onclick="deleteForm(this)" class="fa-solid fa-trash-can"></i>`
-  cell5.innerHTML=`<i onclick="editForm()" class="fa-solid fa-pen-to-square"></i>`
-   }
+console.log(arr);
+localStorage.record= JSON.stringify(arr);
+
+init();
+document.getElementById('formContainer').reset();
 
 }
 
-
-let deleteForm=function(e)
-{
-   e.parentElement.parentElement.remove();
+function tableCell(index,name,id,dept){
+  var tbl = document.getElementById("tableRows");
+  var row = tbl.insertRow();
+  var name1 = row.insertCell(0);
+  var id1 = row.insertCell(1);
+  var dept1 = row.insertCell(2);
+  var edit1 = row.insertCell(3);
+  var dlt1 = row.insertCell(4);
+  name1.innerHTML = name;
+  id1.innerHTML = id;
+  dept1.innerHTML = dept;
+  dlt1.innerHTML = '<i  onclick="DeleteTbl('+index+')" class="fa-solid fa-trash-can"></i>';
+  edit1.innerHTML='<i onclick ="editTbl('+index+')" class="fa-solid fa-pen-to-square"></i>';
 }
 
-function editForm(){
+function DeleteTbl(index){
+  var tbl = document.getElementById("tableRows");
+  tbl.deleteRow(index);
+  arr.splice(index,1);
+  localStorage.record=JSON.stringify(arr);
+  init();
+}
+var selectedIndex=-1;
+function editTbl(index){
+  
   modal.style.display='flex';
+  selectedIndex = index;
+var stuObj = arr[index];
+  document.getElementById("studentName").value=stuObj.n;
+document.getElementById("studentId").value=stuObj.id;
+document.getElementById("studentDept").value=stuObj.dept;
+
+
 }
+
+/*
+function validate(){
+  if((document.getElementById("uname").value=="")){
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+
+    }
+    )
+  }
+}
+*/
+
+
 
 
 
@@ -92,9 +115,14 @@ function errorMessage() {
     if ((document.getElementById("studentName").value==""))
     {
         uname.textContent = "Please enter usename"
+        validate();
+
+
        
     } else {
         uname.textContent = ""
+        
+     
     }
   
 
@@ -106,6 +134,7 @@ function errorMsg(){
     if ((document.getElementById("studentId").value==""))
     {
         upass.textContent = "Please enter password"
+        validate();
       
     }
     else {
@@ -120,6 +149,7 @@ function errorMsg1(){
     if ((document.getElementById("studentDept").value==""))
     {
         upass.textContent = "Please enter password"
+        validate();
       
     }
     else {
