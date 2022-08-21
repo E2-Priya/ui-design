@@ -14,27 +14,39 @@
 
   <div id="my-modal" class="modal">
     <div class="modal-content">
-        <form   id="formContainer"   required>
+        <form   id="formContainer" ons required>
           <div class="modal-header">
             <p>STUDENT DETAIL</p>
             <button type="button" class="close" id="submit" onclick="closeForm()">&times;</button>
           </div>
           <div class="modal-body">
             <label ><p>STUDENT NAME</p></label>
-            <input id="studentName"  type="text" onblur="errorMessage()"onkeyup="errorMessage()"  placeholder="Enter Student Name"required> 
-            <span id="error"></span>
+            <input id="studentName"  type="text"   placeholder="Enter Student Name"required> 
+            
             <label><p>STUDENT ID</p></label>
-            <input id="studentId" type="text" onblur="errorMsg()"onkeyup="errorMsg()" placeholder="Enter Student Id"required> 
-            <span id="error1"></span>
+            <input id="studentId" type="text"  placeholder="Enter Student Id"required> 
+           
             <label><p>STUDENT DEPARTMENT</p></label>
-            <input id="studentDept" type="text" onblur="errorMsg1()"onkeyup="errorMsg1()" placeholder="Enter Student Department" required> 
+            <input id="studentDept" type="text"  placeholder="Enter Student Department" required> 
             <span id="error2"></span>
           </div>
           <div class="modal-footer">
-            <button type="submit" onclick="closeModal(),onReg(),errorMessage(),errorMsg(),errorMsg1()"  id="closing">SUBMIT</button>
+            <button type="submit" onclick="errorMessage()";  id="closing">SUBMIT</button>
             <button type="reset" >CLEAR</button>
           </div>
         </form>
+    </div>
+  </div>
+
+  <div class="dFull" id="dFull">
+    <div class="dPop">
+      
+      <div class="dBody"><p>Do you want to Delete the details If Yes click Confirm</p></div>
+      <div class="dFoot">
+        <div class="dButton1" ><button onclick="dFunClose()" type="button">CANCEL</button></div>
+        <div class="dButton2" id="check"></div>
+      </div>
+      </div>
     </div>
   </div>
 
@@ -65,3 +77,4 @@
   <div class="left"><span href="#">|PRIVACY POLICY|  |TERMS AND CONDITIONS|   |FEEDBACK| </span></div>
   <div class="rig"><h5 href=""> FREQUENTLY ASKED QUESTION</h5></div>
 </footer>
+</html>
