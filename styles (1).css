@@ -147,16 +147,18 @@ form{
     .modal-body input{
       height: 10%;
       width: 80%;
+      margin-block-end: 10px;
     }
     
     .modal-body label{
       font-size: 20px;
       color: rgb(0, 3, 10);
-      height: 10%;
+      height: 12%;
       width: 80%;
+      margin-block-start: 9px;
     }
     .modal-body span{
-      height: 10%;
+      height: 8%;
       width: 80%;
       color: red;
       text-align: center;
@@ -278,4 +280,85 @@ footer{
     text-align: center;
     
   }
+  .dBody p{
+    color: #fff;
+    width: 70%;
+  }
 
+.dFull{
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: none;
+  position:fixed;
+  flex-direction:column;
+  align-content:center;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.dPop{
+  height: 35%;
+  width: 40%;
+  border-radius: 10px;
+  
+}
+
+.dBody{
+  height: 70%;
+  width: 100%;
+  background-color:rgb(37 43 43);
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+  justify-content: center;
+
+}
+.dFoot{
+  height: 30%;
+  width: 100%;
+  background-color: rgb(203, 191, 191);
+  display: flex;
+  flex-direction:row;
+  align-content:center;
+  justify-content:space-evenly;
+  text-align: center;
+  align-items: center;
+}
+.dButton1{
+  height: 90%;
+  width: 30%;
+}
+.dButton2{
+  height: 90%;
+  width: 30%;
+}
+.dButton1  button{
+  height: 85%;
+  width: 100%;
+  background-color: #000000;
+  color: #f1f1f1;
+  border-radius: 10px;
+  margin-block-start: 5px;
+}
+.dButton2 button{
+  height: 85%;
+  width: 100%;
+  background-color: #000000;
+  color: #f1f1f1;
+  border-radius: 10px;
+  margin-block-start: 5px;
+}
+.dButton1 button:hover{
+  background-color: rgb(75, 74, 74);
+  text-decoration: none;
+  cursor: pointer;
+}
+.dButton2 button:hover{
+  background-color: rgb(75, 74, 74);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*<button type="button" onclick="DeleteTbl('index') ">CONFIRM</button>*/
