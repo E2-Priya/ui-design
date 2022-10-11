@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 25, 2013 4:23:22 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="studentInformation.Student" table="studentInfo" >
+        <id name="id" column="id" type="int">
+ </id>
+        <property name="studentName" type="string">
+            <column name="name"  />
+         </property>
+         <property name="age" type="int">
+            <column name="age"  />
+        </property>
+        <property name="phone" type="int">
+            <column name="phone"  />
+        </property>
+         <property name="address" type="string">
+            <column name="address"  />
+         </property>
+          <property name="gender" type="string">
+            <column name="gender"  />
+         </property>
+          <property name="mark" type="int">
+            <column name="mark"  />
+        </property>
+        <property name="subId" type="int">
+            <column name="sub"  />
+        </property>
+        
+        
+       
+    </class>
+</hibernate-mapping>
