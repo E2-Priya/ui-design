@@ -10,5 +10,9 @@
 <property name="studentName" value="MP"></property>
 <property name="rollNo" value="122"></property>
 </bean>
+<bean id="student1" class="dependencies.Student">
+<property name="studentName" value="Mohana"></property>
+<property name="rollNo" value="120"></property>
+</bean>
 
 </beans>
