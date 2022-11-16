@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <script>
+            function add()
+            {
+                var num1 = document.getElementById("num1Field").value;
+                var num2 = document.getElementById("num2Field").value;
+              
+                var sum = adder.getSum(num1, num2);
+                document.getElementById("outputDiv").innerHTML = "sum = " + sum;
+            }
+
+        </script>
+    </head>
+    <body>
+        <input id="num1Field"/>
+        <input id="num2Field"/>
+        <button onclick="add()">sum</button>
+        <div id="outputDiv"></div>
+    </body>
+</html>
+
