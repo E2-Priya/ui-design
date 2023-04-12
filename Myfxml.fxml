@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?language JavaScript?>
+ 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+ 
+<VBox  prefHeight="600.0" prefWidth="400.0"  xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="Load.LoadTestMqtt.Controller">
+ 
+  <children>
+    <Label  alignment="CENTER_LEFT"  prefHeight="20.0" prefWidth="400.0" text="Enter the number of users want to created with mqtt server" textAlignment="LEFT" />
+    <TextField fx:id="inputText"  prefHeight="30.0" prefWidth="100.0" />
+    <Label> </Label>
+    <Button  alignment="CENTER_RIGHT" contentDisplay="CENTER" text="Submit"  onAction="#submit" textAlignment="CENTER" />
+    <VBox >
+    <Label  alignment="CENTER_LEFT"  prefHeight="20.0" prefWidth="400.0" text="Enter the message to send subscribers" textAlignment="LEFT" />
+    <TextField fx:id="message"  prefHeight="30.0" prefWidth="100.0" />
+    </VBox>
+   <FlowPane fx:id="Listing"> </FlowPane>
+ 
+  </children>
+</VBox>
