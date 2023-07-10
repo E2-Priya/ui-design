@@ -1,0 +1,56 @@
+html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+.containerDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.headerClass{
+   
+    -webkit-text-fill-color: bisque;
+}
+.headerDiv{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.startBtnDiv{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startBtnDiv button{
+    height: 6%;
+    width: 20%;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.startBtnDiv button:hover{
+    background-color: black;
+    -webkit-text-fill-color: white;
+}

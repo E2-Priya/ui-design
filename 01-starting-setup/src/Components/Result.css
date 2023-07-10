@@ -1,0 +1,86 @@
+.divv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainContainer{
+   height: auto;
+    width: 100%;
+    background: #7f7d7d;
+    border-radius: 20px;
+    padding: 10px;
+
+}.container{
+    height: 22%;
+    width: 100%;
+}
+.container ul{
+    list-style-type: none;
+    height: 100%;
+}
+
+.qnContainer{
+    height: 20%;
+    width: 100%;
+}
+.qnContainer2{
+    height: 100%;
+    font-size: large;
+    font-weight: 800;
+}
+.choiceContainer{
+    height: 100%;
+    width: 100%;
+}
+.choiceContainer ul{
+    height: 100%;
+    width: 93%;
+}
+
+.choiceList {
+    height: 20%;
+    background-color: rgb(242, 180, 163);
+    -webkit-text-fill-color: #040404;
+    border-radius: 20px;
+    margin: 10px;
+    font-size: large;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px;
+    padding-left: 14px;
+}
+.choiceContainer2{
+    height: 80%;
+}
+
+.scoredCrt{
+    background-color: rgb(4, 224, 4); ;
+}
+
+.crtAns{
+    background-color: rgb(167, 239, 167);
+}
+.selectAns{
+    background-color: rgb(227, 152, 152);
+}
+.wrongAns{
+    background-color: rgb(246, 38, 38);
+}
+.scoreClass{
+    font-size: xx-large;
+    font-weight: bold;
+}
+.scoreDiv{
+    width: 90%;
+    border-radius: 10px;
+    background: #0b2223;
+    margin-top: 10px;
+    -webkit-text-fill-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
