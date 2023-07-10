@@ -1,0 +1,8 @@
+var express = require('express');
+var router = express.Router();
+var controller = require('../controller/role_functions');
+router.get('/',controller.getAllRole);
+router.post('/',controller.postRole);
+router.put('/', controller.updateRole);
+router.delete('/',controller.deleteRole);
+module.exports = router;
