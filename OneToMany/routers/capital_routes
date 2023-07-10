@@ -1,0 +1,8 @@
+var express = require('express');
+var router = express.Router();
+var controller = require('../controller/capital_functions');
+router.get('/',controller.getCapital);
+router.post('/',controller.postCapital);
+router.put('/', controller.updateCapital);
+router.delete('/',controller.deleteCapital);
+module.exports = router;

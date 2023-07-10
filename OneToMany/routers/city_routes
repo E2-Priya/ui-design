@@ -1,0 +1,8 @@
+var express = require('express');
+var router = express.Router();
+var controller = require('../controller/city_functions');
+router.get('/',controller.getCity);
+router.post('/',controller.postCity);
+router.put('/', controller.updateCity);
+router.delete('/',controller.deleteCity);
+module.exports = router;

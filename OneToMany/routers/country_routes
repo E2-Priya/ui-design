@@ -1,0 +1,8 @@
+var express = require('express');
+var router = express.Router();
+var controller = require('../controller/country_functions');
+router.get('/',controller.getCountry);
+router.post('/',controller.postCountry);
+router.put('/', controller.updateCountry);
+router.delete('/',controller.deleteCountry);
+module.exports = router;
