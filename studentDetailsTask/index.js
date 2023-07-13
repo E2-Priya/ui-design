@@ -1,0 +1,6 @@
+var express = require('express')
+var app = express()
+app.use(express.json())
+const student = require('./routers/student_routes')
+app.use('/student', student)
+app.listen(3000)

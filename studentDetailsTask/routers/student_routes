@@ -1,0 +1,10 @@
+var express = require('express');
+var router = express.Router();
+var controller = require('../controller/student_functions');
+router.get('/',controller.getStudent);
+router.post('/',controller.postStudent);
+router.put('/', controller.updateStudent);
+router.delete('/',controller.deleteStudent);
+router.get('/category',controller.getCategory)
+router.post('/grade',controller.postGrade)
+module.exports = router;
